@@ -1,0 +1,43 @@
+1. first cell is for libary import.
+2. checkandplotdata() reads csv files output initial analysis 
+on the data with plot and bunch of prints, e.g. if there is null in the datasets.
+3.  KBestSelectFeatures() returns kbest columns, based on input
+4. adjustDiff() adjusts and matches the length of columns of 2 lists.
+5. preprocess() read csv files and split into audio, text, metadata
+audio to 2 different style, bins and rescale to 0 to 1
+some meta to bins and rescale.
+title and tags to tfidfvectorizer
+kbest for title and tags.
+
+preprocess output: 
+train,valid,test
+alltitle
+kbesttitle
+metadata
+meta without title
+meta without key
+allaudio
+kbestaudio
+audioandLTD... audio and loudness tempo duration
+kbesttext
+alltext
+frequent title
+frequent tags
+binned numerical values
+label
+trackid
+
+6. choosek() returns optimal value of k for kbest
+7. prediction() run train(),predict(),evaluate()
+It print accuracy of each classifier and return list of accuracy
+train():build Machine Learning model from the training data
+predict():use trained model to predict a class for the validation data.
+evaluate():calculate the accuracy of your model based on an evaluation metric
+
+8. bar_plot() do plotting 
+9. GridMLP() to find best parameter for MLP
+10. GridLR() to find best parameter for Logistic regression
+11. GridDT() to find best parameter for Decision tree
+12. tunedPrediction() to reuturn accuracy of tuned models
+13. PlotGridMLP() prints a table of the list of the predction with its accuracy on MLP
+14. last cell output test prediction file to submit on kaggle
